@@ -41,7 +41,7 @@ Usage
 Once you've included keynapse javascript and css files, start keynapse just pressing `ctrl + shift + [up|down|left|right]`:
 
 
-![keynapse.gif](/master/doc/keynapse.gif?raw=true "Keynapse working!")
+![keynapse.gif](https://github.com/danilosampaio/keynapse/blob/master/doc/keynapse.gif?raw=true "Keynapse working!")
 
 
 Navigate between main components of your app, pressing 'tab'.
