@@ -1,0 +1,31 @@
+{
+  "name": "keynapse",
+  "version": "0.0.0",
+  "description": "keynapse is a lightweight front-end library for improve your app navigation.",
+  "author": {
+    "name": "Danilo Sampaio",
+    "email": "danilo.sampaio@gmail.com",
+    "url": "https://github.com/danilosampaio/"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danilosampaio/keynapse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/danilosampaio/keynapse/issues"
+  },
+  "keywords": [
+    "keyboard",
+    "hotkey",
+    "navigation",
+    "front-end",
+    "library",
+    "web"
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-cssmin": "~0.7.0",
+  }
+}
