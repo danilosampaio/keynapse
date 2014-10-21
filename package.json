@@ -1,6 +1,6 @@
 {
   "name": "keynapse",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "keynapse is a lightweight front-end library for improve your app navigation.",
   "author": {
     "name": "Danilo Sampaio",
@@ -26,6 +26,6 @@
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-uglify": "~0.2.7",
-    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-contrib-cssmin": "~0.7.0"
   }
 }
