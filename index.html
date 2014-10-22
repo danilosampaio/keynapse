@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Keynapse by danilosampaio</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Keynapse</h1>
+        <p>keynapse is a lightweight front-end library for improve your app navigation.</p>
+        <p class="view"><a href="https://github.com/danilosampaio/keynapse">View the Project on GitHub <small>danilosampaio/keynapse</small></a></p>
+        <ul>
+          <li><a href="https://github.com/danilosampaio/keynapse/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/danilosampaio/keynapse/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/danilosampaio/keynapse">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="keynapse" class="anchor" href="#keynapse"><span class="octicon octicon-link"></span></a>keynapse</h1>
+
+<p>** beta version **</p>
+
+<p>keynapse is a lightweight front-end library for improve your app navigation. 
+Make your app more productive highlighting its main components.</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<ul>
+<li>
+<a href="http://bower.io">Bower</a>: <code>bower install keynapse</code>.</li>
+<li>
+<a href="https://www.npmjs.org">npm</a>: <code>npm install keynapse</code>.</li>
+</ul>
+
+<h2>
+<a name="whats-included" class="anchor" href="#whats-included"><span class="octicon octicon-link"></span></a>What's included</h2>
+
+<p>Within the build you'll find the following directories and files:</p>
+
+<pre><code>keynapse/
+├── css/
+│   ├── keynapse.min.css
+│   └── keynapse-theme.min.css
+└── js/
+    └── keynapse.min.js
+</code></pre>
+
+<h2>
+<a name="building-keynapse" class="anchor" href="#building-keynapse"><span class="octicon octicon-link"></span></a>Building keynapse</h2>
+
+<div class="highlight highlight-sh"><pre>
+<span class="c"># Run the default task</span>
+grunt
+</pre></div>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Once you've included keynapse javascript and css files, start keynapse just pressing <code>ctrl + shift + [up|down|left|right]</code>:</p>
+
+<p><img src="https://github.com/danilosampaio/keynapse/blob/master/doc/keynapse.gif?raw=true" alt="keynapse.gif" title="Keynapse working!"></p>
+
+<p>Navigate between main components of your app, pressing 'tab'.</p>
+
+<h2>
+<a name="hotkeys" class="anchor" href="#hotkeys"><span class="octicon octicon-link"></span></a>Hotkeys</h2>
+
+<ul>
+<li>
+<code>ctrl + shift + [up|down|left|right]</code>: start/stop keynapse</li>
+<li>
+<code>tab</code>: Navigate between keynapse cells(tags marked with <code>kn-cell</code> the main components of application )</li>
+<li>
+<code>esc</code>: reset selected kn-cell to first one, or if selected kn-cell already is first one, stop keynapse</li>
+<li>
+<code>[1-9]|[a-z]</code>: dinamic hotkeys, created for each kn-cell</li>
+</ul>
+
+<h2>
+<a name="developer-usage" class="anchor" href="#developer-usage"><span class="octicon octicon-link"></span></a>Developer Usage</h2>
+
+<ul>
+<li>Defining kn-cells</li>
+</ul>
+
+<p>The only thing you need to do is define the main components of your application adding <code>kn-cell</code> attribute:</p>
+
+<pre><code>&lt;button kn-cell type="submit"&gt;Submit&lt;/button&gt;
+&lt;a kn-cell href="#"&gt;Link&lt;/a&gt;
+</code></pre>
+
+<h2>
+<a name="roadmap" class="anchor" href="#roadmap"><span class="octicon octicon-link"></span></a>Roadmap</h2>
+
+<ul>
+<li>Improve documentation</li>
+<li>Create a second method to define <code>kn-cell</code> using jquery plugin strategy, like: <code>$('my selector').keynapse()</code>
+</li>
+<li>Create options to use diferent themes</li>
+<li>Create more themes</li>
+<li>Create enhancements for bootstrap components like grids, menus</li>
+<li>Travis-CI tests</li>
+</ul>
+
+<h2>
+<a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>Dependencies</h2>
+
+<ul>
+<li><a href="https://jquery.org/">jquery</a></li>
+<li><a href="http://dmauro.github.io/Keypress">Keypress</a></li>
+</ul>
+
+<h2>
+<a name="copyright-and-license" class="anchor" href="#copyright-and-license"><span class="octicon octicon-link"></span></a>Copyright and license</h2>
+
+<p>The MIT License</p>
+
+<p>Copyright (c) 2014 Danilo Sampaio</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/danilosampaio">danilosampaio</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
