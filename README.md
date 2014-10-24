@@ -1,6 +1,6 @@
 keynapse
 ===============
-[![NPM version](https://badge.fury.io/js/keynapse.svg)](http://badge.fury.io/js/keynapse) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+[![NPM version](https://badge.fury.io/js/keynapse.svg)](http://badge.fury.io/js/keynapse) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Build Status](https://travis-ci.org/danilosampaio/keynapse.svg?branch=0.0.5)](https://travis-ci.org/danilosampaio/keynapse)
 
 ** beta version **
 
