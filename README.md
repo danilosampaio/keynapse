@@ -1,5 +1,6 @@
 keynapse
 ===============
+[![NPM version](https://badge.fury.io/js/keynapse.svg)](http://badge.fury.io/js/keynapse) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 ** beta version **
 
