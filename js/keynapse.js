@@ -105,7 +105,10 @@ function prepareApplication(){
 
 //add the main panel of keynapse application
 function addKnPanel(){
-	$("body").append("<div kn-panel class=kn-panel></div>");
+	var zIndex = getMaxZIndex() + 10;
+	var panel = $("<div kn-panel class=kn-panel></div>");
+	panel.css("z-index", zIndex);
+	$("body").append(panel);
 }
 
 //registry hotkeys that starts/stops keynapse application
@@ -284,4 +287,15 @@ function addKnCellHint(knCell){
 //remove all kn-cell hints
 function removeKnCellHint(){
 	$("[kn-cell-hint]").remove();
+}
+
+//this function is based on topzindex jquery plugin
+function getMaxZIndex(){
+    var group = "*";
+    var zmax = 0;
+    $(group).each(function() {
+        var cur = parseInt($(this).css('z-index'));
+        zmax = cur !== undefined && cur > zmax ? cur : zmax;
+    });
+    return zmax;
 }
