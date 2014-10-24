@@ -108,6 +108,9 @@ function addKnPanel(){
 	var zIndex = getMaxZIndex() + 10;
 	var panel = $("<div kn-panel class=kn-panel></div>");
 	panel.css("z-index", zIndex);
+	panel.click(function(){
+		stopKeynapse();
+	})
 	$("body").append(panel);
 }
 
@@ -144,7 +147,7 @@ function resetKeynapse(){
 //registry hotkeys for navigating between kn-cells
 function registerNavigationKeys(keynapse){
 	keynapse.listener.simple_combo("tab", nextKnCell);
-	keynapse.listener.simple_combo("enter", selectKnCell);	
+	keynapse.listener.simple_combo("enter", selectKnCell);
 }
 
 //unregistry hotkeys for navigating between kn-cells,
@@ -152,10 +155,11 @@ function registerNavigationKeys(keynapse){
 function unregisterNavigationKeys(keynapse){
 	keynapse.listener.unregister_combo("tab");
 	keynapse.listener.unregister_combo("enter");
+	keynapse.listener.unregister_combo('.');
 
 	for (var i = keynapse.cellHotKeys.length - 1; i >= 0; i--) {
 		keynapse.listener.unregister_combo(keynapse.cellHotKeys[i]);
-	};	
+	};
 }
 
 //show the maing panel, highlight kn-cells,
@@ -179,9 +183,13 @@ function startKeynapse(e){
 			keynapse.currentKnCell.knCellHint.addClass('kn-cell-hint-current');
 		}
 
-		if(keynapse.knCells.length <= keynapse.cellHotKeys.length){			
+		if(keynapse.knCells.length <= keynapse.cellHotKeys.length){
 			var cellHotKey = keynapse.cellHotKeys[keynapse.knCells.length - 1]
 			keynapse.listener.simple_combo(cellHotKey, selectKnCellByIndex);
+		} else {
+			if ( index == keynapse.cellHotKeys.length ){
+				keynapse.listener.simple_combo(".", nextKnCell);
+			}
 		}
 	});
 	window.keynapse.isStarted = true;
@@ -274,7 +282,7 @@ function addKnCellHint(knCell){
 	var left = parentPosition.left - (parentWidth % 2) + 5;
 	var top = parentPosition.top + 5;
 	var knCellIndex = window.keynapse.knCells.indexOf(knCell);
-	var label = keynapse.cellHotKeys[knCellIndex];
+	var label = knCellIndex > keynapse.cellHotKeys.length - 1 ? '.' : keynapse.cellHotKeys[knCellIndex];
 
 	var knCellHintDiv = "<span kn-cell-hint class=kn-cell-hint>" + label + "</span>";
 	var knCellHint = $(knCellHintDiv).insertAfter($(knCell));
