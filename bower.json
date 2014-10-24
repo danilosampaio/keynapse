@@ -1,6 +1,6 @@
 {
   "name": "keynapse",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "keynapse is a lightweight front-end library for improve your app navigation.",  
   "authors": [{
     "name": "Danilo Sampaio",
