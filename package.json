@@ -27,5 +27,8 @@
     "grunt": "~0.4.2",
     "grunt-contrib-uglify": "~0.2.7",
     "grunt-contrib-cssmin": "~0.7.0"
+  },
+  "scripts": {
+    "test": "grunt --verbose"
   }
 }
