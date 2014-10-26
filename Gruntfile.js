@@ -1,6 +1,25 @@
 'use strict'
 
+var fs = require('fs');
+
 // constants and functions
+
+function getTheme(grunt){
+	var dir = './css/themes/';
+	var themes = fs.readdirSync(dir);
+	var defaultTheme = dir + 'dark.css';
+	var customTheme = null;
+
+	themes.forEach(function(file){		
+		var filename = file.replace(/^.*[\\\/]/, '')
+		var fileNameWithoutExtension = filename.split('.')[0]
+		if (grunt.option(fileNameWithoutExtension) !== undefined ){
+			customTheme = dir + file;
+		}
+	});
+
+	return customTheme ? customTheme: defaultTheme;
+}
 
 module.exports = function (grunt) {
 	
@@ -26,11 +45,11 @@ module.exports = function (grunt) {
 			}
 		},
 
-		// Concat and minify css
+		// Concat and minify css with default theme(dark)
 		cssmin: {
 			combine: {
 				files: {
-					'./build/css/keynapse.min.css': ['./css/keynapse.css']
+					'./build/css/keynapse.min.css': ['./css/keynapse.css', getTheme(grunt) ]
 				}
 			}
 		}
@@ -38,4 +57,7 @@ module.exports = function (grunt) {
 
 	// default task
 	grunt.registerTask( 'default', [ 'uglify', 'cssmin' ] );
+
+	// build task with white theme
+	//grunt.registerTask( 'white', [ 'uglify', 'cssmin_white' ] );
 }

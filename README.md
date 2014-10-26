@@ -34,6 +34,9 @@ Building keynapse
 
 # Run the default task
 grunt
+
+# build with custom theme
+grunt --white
 ```
 
 Usage
@@ -52,7 +55,7 @@ Hotkeys
 * `ctrl + shift + [up|down|left|right]`: start/stop keynapse
 * `tab`: Navigate between keynapse cells(tags marked with `kn-cell` the main components of application )
 * `esc`: reset selected kn-cell to first one, or if selected kn-cell already is first one, stop keynapse
-* `[1-9]|[a-z]`: dinamic hotkeys, created for each kn-cell
+* `[1-9]|[a-z]`: dynamic hotkeys, created for each kn-cell
 
 
 Developer Usage
@@ -72,10 +75,10 @@ Roadmap
 
 * Improve documentation
 * Create a second method to define `kn-cell` using jquery plugin strategy, like: `$('my selector').keynapse()`
-* Create options to use diferent themes
+* Create options to use different themes
 * Create more themes
 * Create enhancements for bootstrap components like grids, menus
-* Travis-CI tests
+* Improve Travis-CI tests
 
 Dependencies
 ------------

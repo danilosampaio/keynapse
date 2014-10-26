@@ -13,7 +13,7 @@
 
 })(window, document);
 
-//the main function of keynapse bootstraping proccess,
+//the main function of keynapse bootstrapping process,
 //it initializes keynapse instance with default properties
 //and constants
 function initKeynapse(){
@@ -150,8 +150,8 @@ function registerNavigationKeys(keynapse){
 	keynapse.listener.simple_combo("enter", selectKnCell);
 }
 
-//unregistry hotkeys for navigating between kn-cells,
-//and dinamic hotkeys
+//unregister hotkeys for navigating between kn-cells,
+//and dynamic hotkeys
 function unregisterNavigationKeys(keynapse){
 	keynapse.listener.unregister_combo("tab");
 	keynapse.listener.unregister_combo("enter");
@@ -163,7 +163,7 @@ function unregisterNavigationKeys(keynapse){
 }
 
 //show the maing panel, highlight kn-cells,
-//and registry dinamic hotkeys for each kn-cell
+//and registry dynamic hotkeys for each kn-cell
 function startKeynapse(e){
 	if ( window.keynapse.isStarted ){
 		stopKeynapse();
@@ -195,8 +195,8 @@ function startKeynapse(e){
 	window.keynapse.isStarted = true;
 }
 
-//hide the maing panel, hide kn-cell hints,
-//and unregistry dinamic hotkeys
+//hide the main panel, hide kn-cell hints,
+//and unregister dynamic hotkeys
 function stopKeynapse(){
 	if ( !window.keynapse.isStarted ){
 		return;
@@ -230,7 +230,7 @@ function nextKnCell(e){
 	currentKnCell.knCellHint.addClass('kn-cell-hint-current');
 }
 
-//event dispatched by dinamic hotkey that selects next kn-cell
+//event dispatched by dynamic hotkey that selects next kn-cell
 function selectKnCellByIndex(e){
 	
 	var previousKnCell = keynapse.currentKnCell;
