@@ -40,3 +40,14 @@
   border-radius: 11px;
   z-index:    11;
 }
+
+.kn-empty {
+  position: absolute;
+  display: none;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  left     : 50%;
+  top      : 50%;
+  margin-left : -100px; /* half of the width  */
+  margin-top  : -100px; /* half of the height */
+}

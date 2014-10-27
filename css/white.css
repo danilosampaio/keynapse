@@ -1,0 +1,17 @@
+.kn-panel {
+  background: #fff; 
+}
+
+.kn-cell-hint {
+  background: #fff; 
+  color: #000;
+  border-color: #fff;
+}
+
+.kn-cell-hint-current {  
+  border-color: #6699FF;
+}
+
+.kn-empty {
+  color: #000;  
+}

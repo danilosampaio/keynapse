@@ -192,6 +192,11 @@ function startKeynapse(e){
 			}
 		}
 	});
+
+	if(keynapse.knCells.length == 0){
+		addKnEmpty();
+	}
+
 	window.keynapse.isStarted = true;
 }
 
@@ -204,6 +209,7 @@ function stopKeynapse(){
 	unregisterNavigationKeys(window.keynapse);
 	keynapse.knCells = [];
 	$("[kn-panel]").fadeOut();
+	$("[kn-empty]").fadeOut();
 	$("[kn-cell]").each(function(index){
 		$(this).removeClass("kn-cell");
 		$(this).removeClass("kn-cell-current");		
@@ -306,4 +312,11 @@ function getMaxZIndex(){
         zmax = cur !== undefined && cur > zmax ? cur : zmax;
     });
     return zmax;
+}
+
+function addKnEmpty(){
+	var knEmptyDiv = "<span kn-empty class=kn-empty>There is no hotspot...</span>";
+	var knPanel = $("[kn-panel]");
+	var knEmpty = $(knEmptyDiv).insertAfter(knPanel);
+	$(knEmpty).fadeIn();
 }
