@@ -31,8 +31,7 @@
 }
 
 .kn-cell-hint-current {  
-  opacity:    1; 
-
+  opacity: 1;
   width: 22px;
   height: 22px;
   -webkit-border-radius: 11px;
@@ -44,10 +43,9 @@
 .kn-empty {
   position: absolute;
   display: none;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 24px;
-  left     : 50%;
-  top      : 50%;
-  margin-left : -100px; /* half of the width  */
-  margin-top  : -100px; /* half of the height */
+  left : 50%;
+  top : 50%;
+  margin-left : -100px;
+  margin-top  : -100px;
 }

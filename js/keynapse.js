@@ -209,12 +209,12 @@ function stopKeynapse(){
 	unregisterNavigationKeys(window.keynapse);
 	keynapse.knCells = [];
 	$("[kn-panel]").fadeOut();
-	$("[kn-empty]").fadeOut();
 	$("[kn-cell]").each(function(index){
 		$(this).removeClass("kn-cell");
 		$(this).removeClass("kn-cell-current");		
 	});
 	removeKnCellHint();
+	removeKnEmpty();
 	window.keynapse.isStarted = false;
 }
 
@@ -303,6 +303,11 @@ function removeKnCellHint(){
 	$("[kn-cell-hint]").remove();
 }
 
+//remove kn-empty
+function removeKnEmpty(){
+	$("[kn-empty]").remove();
+}
+
 //this function is based on topzindex jquery plugin
 function getMaxZIndex(){
     var group = "*";
@@ -315,7 +320,7 @@ function getMaxZIndex(){
 }
 
 function addKnEmpty(){
-	var knEmptyDiv = "<span kn-empty class=kn-empty>There is no hotspot...</span>";
+	var knEmptyDiv = "<span kn-empty class=kn-empty>Nothing for now...</span>";
 	var knPanel = $("[kn-panel]");
 	var knEmpty = $(knEmptyDiv).insertAfter(knPanel);
 	$(knEmpty).fadeIn();

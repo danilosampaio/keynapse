@@ -13,5 +13,6 @@
 }
 
 .kn-empty {
-  color: #fff;  
+  color: #000;
+  background: #fff;
 }

@@ -57,7 +57,4 @@ module.exports = function (grunt) {
 
 	// default task
 	grunt.registerTask( 'default', [ 'uglify', 'cssmin' ] );
-
-	// build task with white theme
-	//grunt.registerTask( 'white', [ 'uglify', 'cssmin_white' ] );
 }
