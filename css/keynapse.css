@@ -48,4 +48,12 @@
   top : 50%;
   margin-left : -100px;
   margin-top  : -100px;
+
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px;
+  width: 180px;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  border-radius: 18px;
 }
