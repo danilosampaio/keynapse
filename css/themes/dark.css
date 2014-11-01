@@ -11,3 +11,8 @@
 .kn-cell-hint-current {  
   border-color: #93d4eb;
 }
+
+.kn-empty {
+  color: #000;
+  background: #fff;
+}
